@@ -1,7 +1,7 @@
-python-isc-dhcp-leases
+python-dhcp-leases
 ======================
 
-|Build Status| |PyPI version| |Coverage Status|
+|Build Status| |PyPI version|
 
 Small python module for reading /var/lib/dhcp/dhcpd.leases from
 isc-dhcp-server. This module works in Python 2.7 and 3.x
@@ -17,21 +17,7 @@ Through pypi
 
 .. code:: bash
 
-    $ sudo pip install isc_dhcp_leases
-
-Through your distribution package manager
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This python module is currently packaged in Debian unstable (release for Debian 9) and will be packaged in Ubuntu 17.04
-(Zesty Zapus)
-
-.. code:: bash
-
-    # For the python 2.7 interpreter
-    $ sudo apt install python-isc-dhcp-leases
-
-    # For the python 3 interpreter
-    $ sudo apt install python3-isc-dhcp-leases
+    $ sudo pip install dhcp_leases
 
 
 Through git
@@ -40,7 +26,7 @@ Through git
 .. code:: bash
 
     $ git clone git@github.com:MartijnBraam/python-isc-dhcp-leases.git
-    $ cd python-isc-dhcp-leases
+    $ cd python-dhcp-leases
     $ python setup.py build
     $ sudo python setup.py install
 
@@ -49,9 +35,9 @@ Usage
 
 .. code:: python
 
-    from isc_dhcp_leases import Lease, IscDhcpLeases
+    from dhcp_leases import Lease, DhcpLeases
 
-    leases = IscDhcpLeases('/path/to/dhcpd.leases')
+    leases = DhcpLeases('/path/to/dhcpd.leases')
     leases.get()  # Returns the leases as a list of Lease objects
     leases.get_current()  # Returns only the currently valid dhcp leases as dict
                           # The key of the dict is the device mac address and the
@@ -61,9 +47,9 @@ Or read a gzip'ed file:
 
 .. code:: python
 
-    from isc_dhcp_leases import Lease, IscDhcpLeases
-    # IscDhcpLeases(filename, gzip=False)
-    leases = IscDhcpLeases('/path/to/dhcpd.leases', True) # True param starts the gzip reader
+    from dhcp_leases import Lease, DhcpLeases
+    # DhcpLeases(filename, gzip=False)
+    leases = DhcpLeases('/path/to/dhcpd.leases', True) # True param starts the gzip reader
     leases.get()  # Returns the leases as a list of Lease objects
     leases.get_current()  # Returns only the currently valid dhcp leases as dict
                           # The key of the dict is the device mac address and the
@@ -122,9 +108,7 @@ The unit tests can be run with ``setup.py``:
     # With coverage report:
     $ coverage run setup.py test
 
-.. |Build Status| image:: https://travis-ci.org/MartijnBraam/python-isc-dhcp-leases.svg?branch=master
-   :target: https://travis-ci.org/MartijnBraam/python-isc-dhcp-leases
-.. |PyPI version| image:: https://badge.fury.io/py/isc_dhcp_leases.svg
-   :target: http://badge.fury.io/py/isc_dhcp_leases
-.. |Coverage Status| image:: https://coveralls.io/repos/MartijnBraam/python-isc-dhcp-leases/badge.svg
-   :target: https://coveralls.io/r/MartijnBraam/python-isc-dhcp-leases
+.. |Build Status| image:: https://travis-ci.org/acikogun/python-dhcp-leases.svg?branch=master
+   :target: https://travis-ci.org/acikogun/python-dhcp-leases
+.. |PyPI version| image:: https://badge.fury.io/py/dhcp_leases.svg
+   :target: http://badge.fury.io/py/dhcp_leases

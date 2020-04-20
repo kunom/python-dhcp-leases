@@ -39,14 +39,14 @@ class DiscoverTest(Command):
         discover_and_run_tests()
 
 setup(
-    name='isc_dhcp_leases',
-    version='0.9.1',
-    packages=['isc_dhcp_leases'],
-    url='https://github.com/MartijnBraam/python-isc-dhcp-leases',
+    name='dhcp_leases',
+    version='0.1.0',
+    packages=['dhcp_leases'],
+    url='https://github.com/acikogun/python-dhcp-leases',
     install_requires=['six'],
     license='MIT',
-    author='Martijn Braam',
-    author_email='martijn@brixit.nl',
+    author='Ogun Acik',
+    author_email='acikogun@gmail.com',
     description='Small python module for reading /var/lib/dhcp/dhcpd.leases from isc-dhcp-server',
     cmdclass={'test': DiscoverTest},
     classifiers=[
