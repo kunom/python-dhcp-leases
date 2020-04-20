@@ -123,7 +123,7 @@ def _extract_properties(config):
     return general, options, sets
 
 
-class IscDhcpLeases(object):
+class DhcpLeases(object):
     """
     Class to parse isc-dhcp-server lease files into lease objects
     """
@@ -371,5 +371,5 @@ class Lease6(BaseLease):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    leases = IscDhcpLeases('dhcpd.leases')
+    leases = DhcpLeases('dhcpd.leases')
     print(leases.get_current())
