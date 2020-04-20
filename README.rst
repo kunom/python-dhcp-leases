@@ -25,7 +25,7 @@ Through git
 
 .. code:: bash
 
-    $ git clone git@github.com:MartijnBraam/python-isc-dhcp-leases.git
+    $ git clone git@github.com:acikogun/python-dhcp-leases.git
     $ cd python-dhcp-leases
     $ python setup.py build
     $ sudo python setup.py install
