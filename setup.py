@@ -1,4 +1,5 @@
-from distutils.core import setup, Command
+from setuptools import setup, find_packages
+from distutils.core import Command
 
 
 def discover_and_run_tests():
@@ -41,7 +42,7 @@ class DiscoverTest(Command):
 setup(
     name='dhcp_leases',
     version='0.1.0',
-    packages=['dhcp_leases'],
+    packages=find_packages(),
     url='https://github.com/acikogun/python-dhcp-leases',
     install_requires=['six'],
     license='MIT',
