@@ -1,5 +1,14 @@
+import codecs
+import os.path
+
 from setuptools import setup, find_packages
 from distutils.core import Command
+
+here = os.path.abspath(os.path.dirname(__file__))
+
+
+def read(*parts):
+    return codecs.open(os.path.join(here, *parts), 'r').read()
 
 
 def discover_and_run_tests():
@@ -41,7 +50,7 @@ class DiscoverTest(Command):
 
 setup(
     name='dhcp-leases',
-    version='0.1.0',
+    version='0.1.2',
     packages=find_packages(),
     url='https://github.com/acikogun/python-dhcp-leases',
     install_requires=['six'],
@@ -49,6 +58,7 @@ setup(
     author='Ogun Acik',
     author_email='acikogun@gmail.com',
     description='Small python module for reading /var/lib/dhcp/dhcpd.leases from isc-dhcp-server',
+    long_description=read('README.rst'),
     cmdclass={'test': DiscoverTest},
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -60,9 +70,9 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5'
+        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8'
-    ]
+        'Programming Language :: Python :: 3.8',
+    ],
 )
