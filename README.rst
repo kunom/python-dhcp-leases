@@ -110,7 +110,7 @@ The unit tests can be run with ``setup.py``:
 
 .. |Build Status| image:: https://travis-ci.org/acikogun/python-dhcp-leases.svg?branch=master
    :target: https://travis-ci.org/acikogun/python-dhcp-leases
-.. |PyPI version| image:: https://badge.fury.io/py/dhcp-leases.svg
-   :target: http://badge.fury.io/py/dhcp-leases
+.. |PyPI version| image:: https://img.shields.io/pypi/v/dhcp-leases.svg
+   :target: https://pypi.org/project/dhcp-leases
 .. |Coverage Status| image:: https://coveralls.io/repos/github/acikogun/python-dhcp-leases/badge.svg?branch=master
    :target: https://coveralls.io/github/acikogun/python-dhcp-leases?branch=master
