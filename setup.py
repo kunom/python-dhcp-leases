@@ -40,7 +40,7 @@ class DiscoverTest(Command):
         discover_and_run_tests()
 
 setup(
-    name='dhcp_leases',
+    name='dhcp-leases',
     version='0.1.0',
     packages=find_packages(),
     url='https://github.com/acikogun/python-dhcp-leases',
@@ -59,8 +59,10 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5'
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8'
     ]
 )

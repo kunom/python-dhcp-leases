@@ -17,7 +17,7 @@ Through pypi
 
 .. code:: bash
 
-    $ sudo pip install dhcp_leases
+    $ sudo pip install dhcp-leases
 
 
 Through git
