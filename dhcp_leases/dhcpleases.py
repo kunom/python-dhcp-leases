@@ -5,8 +5,6 @@ import re
 import struct
 import gzip
 
-from six import iteritems
-
 
 try:
     utc = datetime.timezone.utc

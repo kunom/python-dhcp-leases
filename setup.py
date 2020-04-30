@@ -53,7 +53,6 @@ setup(
     version='0.1.5',
     packages=find_packages(),
     url='https://github.com/acikogun/python-dhcp-leases',
-    install_requires=['six'],
     license='MIT',
     author='Ogun Acik',
     author_email='acikogun@gmail.com',
