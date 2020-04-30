@@ -8,7 +8,7 @@ import gzip
 
 try:
     utc = datetime.timezone.utc
-except:
+except AttributeError:
     # Support Python 2.7
     class UTC(datetime.tzinfo):
         def fromutc(self, dt):
