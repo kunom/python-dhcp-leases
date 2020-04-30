@@ -68,9 +68,9 @@ def _extract_prop_set(line):
     :param line:
     :return: tuple (key, value)
     """
-    token = ' = "'
+    pattern = ' = "'
     line = line[4:]
-    pos = line.find(token)
+    pos = line.find(pattern)
     return line[:pos], line[pos + 4:-1]
 
 
