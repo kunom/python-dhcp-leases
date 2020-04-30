@@ -35,7 +35,7 @@ Usage
 
 .. code:: python
 
-    from dhcp_leases import Lease, DhcpLeases
+    from dhcp_leases import DhcpLeases
 
     leases = DhcpLeases('/path/to/dhcpd.leases')
     leases.get()  # Returns the leases as a list of Lease objects
@@ -47,7 +47,7 @@ Or read a gzip'ed file:
 
 .. code:: python
 
-    from dhcp_leases import Lease, DhcpLeases
+    from dhcp_leases import DhcpLeases
     # DhcpLeases(filename, gzip=False)
     leases = DhcpLeases('/path/to/dhcpd.leases', True) # True param starts the gzip reader
     leases.get()  # Returns the leases as a list of Lease objects

@@ -1,6 +1,6 @@
 import datetime
 from unittest import TestCase
-from dhcp_leases.dhcpleases import DhcpLeases, Lease, Lease6, utc
+from dhcp_leases.dhcpleases import DhcpLeases, Lease6, utc
 from freezegun import freeze_time
 
 __author__ = 'Martijn Braam <martijn@brixit.nl>'
