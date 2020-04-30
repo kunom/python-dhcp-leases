@@ -234,8 +234,7 @@ class BaseLease(object):
         """
         if self._now:
             return self._now
-        else:
-            return datetime.datetime.utcnow().replace(tzinfo=utc)
+        return datetime.datetime.utcnow().replace(tzinfo=utc)
 
 class Lease(BaseLease):
     """
@@ -281,13 +280,11 @@ class Lease(BaseLease):
         if self.end is None:
             if self.start is not None:
                 return self.start <= self.now
-            else:
-                return True
-        else:
-            if self.start is not None:
-                return self.start <= self.now <= self.end
-            else:
-                return self.now <= self.end
+            return True
+
+        if self.start is not None:
+            return self.start <= self.now <= self.end
+        return self.now <= self.end
 
     def __repr__(self):
         return "<Lease {} for {} ({})>".format(self.ip, self.ethernet, self.hostname)
@@ -349,8 +346,7 @@ class Lease6(BaseLease):
         """
         if self.end is None:
             return True
-        else:
-            return self.now <= self.end
+        return self.now <= self.end
 
     def __repr__(self):
         return "<Lease6 {}>".format(self.ip)
