@@ -185,9 +185,9 @@ class DhcpLeases(object):
         leases = {}
         for lease in all_leases:
             if lease.valid and lease.active:
-                if type(lease) is Lease:
+                if isinstance(lease, Lease):
                     leases[lease.ethernet] = lease
-                elif type(lease) is Lease6:
+                elif isinstance(lease, Lease6):
                     leases['%s-%s' % (lease.type, lease.host_identifier_string)] = lease
         return leases
 
