@@ -50,7 +50,7 @@ class DiscoverTest(Command):
 
 setup(
     name='dhcp-leases',
-    version='0.1.5',
+    version='0.1.6',
     packages=find_packages(),
     url='https://github.com/acikogun/python-dhcp-leases',
     license='MIT',

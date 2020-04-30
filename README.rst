@@ -1,7 +1,7 @@
 python-dhcp-leases
 ======================
 
-|Build Status| |PyPI version| |Coverage Status|
+|Build Status| |PyPI version| |CodeFactor| |Coverage Status|
 
 Small python module for reading /var/lib/dhcp/dhcpd.leases from
 isc-dhcp-server. This module works in Python 2.7 and 3.x
@@ -112,5 +112,8 @@ The unit tests can be run with ``setup.py``:
    :target: https://travis-ci.org/acikogun/python-dhcp-leases
 .. |PyPI version| image:: https://img.shields.io/pypi/v/dhcp-leases.svg
    :target: https://pypi.org/project/dhcp-leases
+.. |CodeFactor| image:: https://www.codefactor.io/repository/github/acikogun/python-dhcp-leases/badge
+   :target: https://www.codefactor.io/repository/github/acikogun/python-dhcp-leases
+   :alt: CodeFactor
 .. |Coverage Status| image:: https://coveralls.io/repos/github/acikogun/python-dhcp-leases/badge.svg?branch=master
    :target: https://coveralls.io/github/acikogun/python-dhcp-leases?branch=master
