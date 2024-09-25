@@ -84,6 +84,13 @@ class TestLease(TestCase):
         self.assertFalse(lease.active)
         self.assertEqual(lease.binding_state, 'free')
 
+    def test_init_no_binding(self):
+        self.lease_data.pop('binding')
+        lease = Lease("192.168.0.1", self.lease_data)
+        self.assertEqual(lease.ip, "192.168.0.1")
+        self.assertIsNone(lease.binding_state)
+        self.assertFalse(lease.active)
+
     @freeze_time("2015-07-6 8:15:0")
     def test_valid_no_starts_property(self):
         self.lease_data.pop('starts')

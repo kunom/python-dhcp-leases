@@ -216,7 +216,7 @@ class BaseLease(object):
         self.data = properties
         self.options = options
         self.sets = sets
-        _, self.binding_state = properties['binding'].split(' ', 1)
+        self.binding_state = properties['binding'].split(' ', 1)[1] if 'binding' in properties else None
         self._now = now
 
     @property
